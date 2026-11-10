@@ -8,12 +8,6 @@ function multiplyValue(value: number, multiplier?: number): number {
 }
 
 
-// console.log(multiplyValue(10));   
-// console.log(multiplyValue(10, 5)); 
-// console.log(multiplyValue(7, 0));  
-
-
-
 
 
 function processInput(value: string | number | boolean): string | number {
@@ -37,12 +31,6 @@ function processInput(value: string | number | boolean): string | number {
 }
 
 
-// console.log(processInput("  TypeScript  "));
-// console.log(processInput(7));               
-// console.log(processInput(true));            
-// console.log(processInput(false));          
-
-
 
 function formatCoordinate(
   coordinate: readonly [number, number, string]
@@ -55,20 +43,10 @@ function formatCoordinate(
 }
 
 
-// console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-// console.log(formatCoordinate([22.35, 91.78, "Chittagong"]));
-
-
-
-
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.flat();
 }
-
-// Sample Input
-// console.log(concatenateArrays(["a", "b"], ["c", "d"]));
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
 
 
 //solution 05:
@@ -94,10 +72,6 @@ const courses: Course[] = [
   { title: "Next.js Pro", students: 85, isPublished: true }
 ];
 
-// console.log(getPopularCourses(courses, 80));
-
-
-
 
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   const result: T[K][] = [];
@@ -116,8 +90,6 @@ const users = [
   { id: 3, name: "Tariq", role: "Subscriber" }
 ];
 
-// console.log(pluckValues(users, "name"));
-// console.log(pluckValues(users, "id"));
 
 
 
@@ -151,9 +123,6 @@ class Manager extends Employee {
 
 const manager = new Manager("Alice", 50000, "Engineering");
 
-// console.log(manager.getDetails());
-// console.log(manager.getRoleInfo());
-
 
 
 function validateAgeAsync(age: number): Promise<string> {
@@ -169,10 +138,3 @@ function validateAgeAsync(age: number): Promise<string> {
 }
 
 
-validateAgeAsync(20)
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error.message));
-
-// validateAgeAsync(15)
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log(error.message));
