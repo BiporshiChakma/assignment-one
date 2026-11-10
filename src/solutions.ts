@@ -1,4 +1,4 @@
-//solution 1
+
 function multiplyValue(value: number, multiplier?: number): number {
   if (multiplier === undefined) {
     return value * 2;
@@ -7,13 +7,13 @@ function multiplyValue(value: number, multiplier?: number): number {
   }
 }
 
-// test
+
 // console.log(multiplyValue(10));   
 // console.log(multiplyValue(10, 5)); 
 // console.log(multiplyValue(7, 0));  
 
 
-//solution 2
+
 
 
 function processInput(value: string | number | boolean): string | number {
@@ -36,14 +36,12 @@ function processInput(value: string | number | boolean): string | number {
   }
 }
 
-// Test
+
 // console.log(processInput("  TypeScript  "));
 // console.log(processInput(7));               
 // console.log(processInput(true));            
 // console.log(processInput(false));          
 
-
-//solution 03
 
 
 function formatCoordinate(
@@ -56,13 +54,13 @@ function formatCoordinate(
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-// Sample Input
+
 // console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
 // console.log(formatCoordinate([22.35, 91.78, "Chittagong"]));
 
 
 
-//solution 04:
+
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.flat();
@@ -88,7 +86,7 @@ function getPopularCourses(courses: Course[], minStudents: number): Course[] {
   return result;
 }
 
-// Sample Input
+
 const courses: Course[] = [
   { title: "TypeScript Mastery", students: 120, isPublished: true },
   { title: "Draft Course", students: 200, isPublished: false },
@@ -99,7 +97,7 @@ const courses: Course[] = [
 // console.log(getPopularCourses(courses, 80));
 
 
-//solution 6:
+
 
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   const result: T[K][] = [];
@@ -111,7 +109,7 @@ function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   return result;
 }
 
-// Sample Input
+
 const users = [
   { id: 1, name: "Rakib", role: "Admin" },
   { id: 2, name: "Sadia", role: "Editor" },
@@ -122,7 +120,7 @@ const users = [
 // console.log(pluckValues(users, "id"));
 
 
-//solution: 7
+
 class Employee {
   protected name: string;
   private baseSalary: number;
@@ -150,14 +148,14 @@ class Manager extends Employee {
   }
 }
 
-// Sample Input
+
 const manager = new Manager("Alice", 50000, "Engineering");
 
 // console.log(manager.getDetails());
 // console.log(manager.getRoleInfo());
 
 
-//solution : 8
+
 function validateAgeAsync(age: number): Promise<string> {
   return new Promise((resolve, reject) => {
     if (age >= 18) {
@@ -170,12 +168,11 @@ function validateAgeAsync(age: number): Promise<string> {
   });
 }
 
-// // Sample Input 1
-// validateAgeAsync(20)
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log(error.message));
 
-// // Sample Input 2
+validateAgeAsync(20)
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error.message));
+
 // validateAgeAsync(15)
 //   .then((result) => console.log(result))
 //   .catch((error) => console.log(error.message));
