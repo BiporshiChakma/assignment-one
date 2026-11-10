@@ -24,6 +24,24 @@ type Student = {
 type Status = "active" | "inactive";
 ```
 
+
+```
+// Type: Union
+type Status = "pending" | "success" | "failed";
+
+// Type: Primitive
+type ID = string | number;
+
+// Type: Tuple
+type Coordinate = [number, number];
+
+// Interface: Object
+interface Product {
+  name: string;
+  price: number;
+}
+```
+
 ## Differences of type alias and interface
 
 1. Interface supports declaration merging, but Type Alias does not.
